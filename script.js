@@ -351,3 +351,31 @@ setTimeout(() => {
 }, 1500);
 
 });
+function exportarProgreso() {
+
+    let datos = {};
+
+    for (let i = 0; i < localStorage.length; i++) {
+
+        let clave = localStorage.key(i);
+
+        datos[clave] = localStorage.getItem(clave);
+
+    }
+
+
+    let archivo = new Blob(
+        [JSON.stringify(datos, null, 2)],
+        { type: "application/json" }
+    );
+
+
+    let enlace = document.createElement("a");
+
+    enlace.href = URL.createObjectURL(archivo);
+
+    enlace.download = "GameVault_progreso.json";
+
+    enlace.click();
+
+}
