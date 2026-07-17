@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    padding: 30px;
+    background-color: #222;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.consolas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+button {
+    padding: 30px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid #555;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+.nintendo {
+    background-color: #e60012;
+}
+
+.playstation {
+    background-color: #003791;
+}
+
+.sega {
+    background-color: #0055aa;
+}
+
+.psp {
+    background-color: #6b2d8b;
+}
+
+.pc {
+    background-color: #107c10;
+}
+
+button:hover {
+    transform: translateY(-8px);
+    background-color: #333;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+#barra-contenedor {
+    width: 80%;
+    height: 25px;
+    background: #ccc;
+    border-radius: 15px;
+    margin: 15px auto;
+    overflow: hidden;
+}
+
+#barra-progreso {
+    height: 100%;
+    width: 0%;
+    background: #4CAF50;
+    border-radius: 15px;
+    transition: width 0.3s;
+}
+
+#porcentaje {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.nintendo {
+    border-color: #e60012;
+}
+
+.playstation {
+    border-color: #003791;
+}
+
+.sega {
+    border-color: #0055aa;
+}
+
+.psp {
+    border-color: #6b2d8b;
+}
+
+.pc {
+    border-color: #107c10;
+}
+#lista-juegos {
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 800px;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 1px solid #444;
+}
+
+#lista-juegos p {
+    background-color: #222;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 10px 0;
+    transition: 0.2s;
+}
+
+#lista-juegos p:hover {
+    transform: translateX(5px);
+    background-color: #333;
+}
+header {
+    padding: 40px;
+    background: linear-gradient(135deg, #222, #111);
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #aaa;
+    font-size: 18px;
+}
+#barra-contenedor {
+    width: 80%;
+    max-width: 600px;
+    height: 25px;
+    background-color: #222;
+    border-radius: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #444;
+}
+
+#barra-progreso {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00c853, #64dd17);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+#porcentaje {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.consolas button {
+    color: white;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid #444;
+    transition: 0.25s;
+}
+
+.consolas button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.consolas button:active {
+    transform: scale(0.95);
+}
+
+.consolas button:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.consolas button:active {
+    transform: scale(0.95);
+}
+.boton-archivo {
+    background-color: #222;
+    color: white;
+    border: 2px solid #555;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.boton-archivo:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+.juego-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.juego-item span {
+    flex: 1;
+}
+
+.juego-item:hover {
+    color: #64dd17;
+}
+
+.juego-item input {
+    width: 20px;
+    height: 20px;
+}
+.juego-item input:checked + span {
+    color: #64dd17;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(100, 221, 23, 0.8);
+    transition: all 0.3s ease;
+}
+#juego-aleatorio {
+    background: #222;
+    color: white;
+    border: 2px solid #555;
+    padding: 18px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+#juego-aleatorio:hover {
+    background: #333;
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.7);
+}
+
+#resultado-aleatorio {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1b1b1b;
+    border-radius: 20px;
+    border: 1px solid #444;
+    font-size: 24px;
+    font-weight: bold;
+}
+.animando {
+    animation: elegirJuego 0.15s infinite;
+}
+
+@keyframes elegirJuego {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

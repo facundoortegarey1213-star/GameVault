@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎮 GameVault</h1>
+        <p>Mi colección de juegos completados y pendientes 🎮</p>
+        <p>Mi biblioteca personal de juegos pendientes</p>
+    </header>
+
+    <main>
+        <h2>Selecciona una consola</h2>
+
+        <div class="consolas">
+    <button class="nintendo">NES</button>
+    <button class="nintendo">SNES</button>
+    <button class="sega">SEGA Mega Drive</button>
+    <button class="nintendo">Game Boy</button>
+    <button class="playstation">PlayStation</button>
+    <button class="nintendo">Nintendo 64</button>
+    <button class="nintendo">Game Boy Color</button>
+    <button class="playstation">PlayStation 2</button>
+    <button class="sega">Dreamcast</button>
+    <button class="nintendo">GameCube</button>
+    <button class="nintendo">Game Boy Advance</button>
+    <button class="nintendo">Nintendo Wii</button>
+    <button class="nintendo">Nintendo DS</button>
+    <button class="psp">PSP</button>
+    <button class="pc">PC</button>
+</div>
+    </main>
+    <div id="contador"></div>
+    <div id="progreso-total"></div>
+    <div id="barra-contenedor">
+    <div id="barra-progreso"></div>
+</div>
+<div id="ultimos-completados"></div>
+<button class="boton-archivo" onclick="exportarProgreso()">💾 Exportar progreso</button>
+
+<input type="file" id="importarArchivo" style="display:none" onchange="importarProgreso(event)">
+
+<button class="boton-archivo" onclick="document.getElementById('importarArchivo').click()">
+📂 Importar progreso
+</button>
+
+<div id="porcentaje"></div>
+<input type="text" id="buscador" placeholder="Buscar juego...">
+<button id="juego-aleatorio">
+🎲 ¿Qué juego voy a jugar?
+</button>
+
+<div id="resultado-aleatorio"></div>
+    <div id="lista-juegos"></div>
+
+    <script src="juegos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
