@@ -38,18 +38,18 @@ botones.forEach(boton => {
                 const fecha = localStorage.getItem(juego + "_fecha");
 
                 listaJuegos.innerHTML += `
-    <p>
-        <label class="juego-item">
-            <input type="checkbox"
-            ${guardado === "completado" ? "checked" : ""}
-            onchange="guardarJuego('${juego}', this.checked)">
-            
-            <span>${juego}</span>
-        </label>
+                <p>
+                    <label class="juego-item">
+                        <input type="checkbox"
+                        ${guardado === "completado" ? "checked" : ""}
+                        onchange="guardarJuego('${juego}', this.checked)">
+                        
+                        <span>${juego}</span>
+                    </label>
 
-        ${fecha ? "<br>✅ Completado: " + fecha : ""}
-    </p>
-`;
+                    ${fecha ? "<br>✅ Completado: " + fecha : ""}
+                </p>
+                `;
             });
 
             contador.textContent =
@@ -86,7 +86,13 @@ function guardarJuego(juego, marcado) {
     }
 
     actualizarProgresoTotal();
-    function exportarProgreso() {
+    mostrarUltimosCompletados();
+
+}
+
+
+// Exportar progreso
+function exportarProgreso() {
 
     let datos = {};
 
@@ -109,14 +115,19 @@ function guardarJuego(juego, marcado) {
 
     enlace.href = URL.createObjectURL(archivo);
 
-    enlace.download = "mi_progreso_juegos.json";
+    enlace.download = "GameVault_progreso.json";
+
+
+    document.body.appendChild(enlace);
 
     enlace.click();
+
+    document.body.removeChild(enlace);
 
 }
 
 
-
+// Importar progreso
 function importarProgreso(event) {
 
     let archivo = event.target.files[0];
@@ -147,9 +158,6 @@ function importarProgreso(event) {
 
 
     lector.readAsText(archivo);
-
-}
-    mostrarUltimosCompletados();
 
 }
 
@@ -198,11 +206,6 @@ buscador.addEventListener("input", () => {
 
     let texto = buscador.value.toLowerCase();
 
-    if (texto === "") {
-        return;
-    }
-
-
     let resultados = [];
 
 
@@ -211,7 +214,6 @@ buscador.addEventListener("input", () => {
         consola.lista.forEach(juego => {
 
             if (juego.toLowerCase().includes(texto)) {
-
 
                 let estado =
                 localStorage.getItem(juego) === "completado"
@@ -241,15 +243,14 @@ buscador.addEventListener("input", () => {
 
     });
 
-
 });
 
 
-// Ejecutar al cargar
-actualizarProgresoTotal();
+// Últimos completados
 function mostrarUltimosCompletados() {
 
     let completados = [];
+
 
     juegos.forEach(consola => {
 
@@ -258,10 +259,12 @@ function mostrarUltimosCompletados() {
             let fecha = localStorage.getItem(juego + "_fecha");
 
             if (fecha) {
+
                 completados.push({
                     nombre: juego,
                     fecha: fecha
                 });
+
             }
 
         });
@@ -270,6 +273,7 @@ function mostrarUltimosCompletados() {
 
 
     let zona = document.getElementById("ultimos-completados");
+
 
     zona.innerHTML = "<h2>🏆 Últimos completados</h2>";
 
@@ -286,13 +290,17 @@ function mostrarUltimosCompletados() {
     });
 
 }
-mostrarUltimosCompletados();
+
+
+// Juego aleatorio
 const botonAleatorio = document.getElementById("juego-aleatorio");
 const resultadoAleatorio = document.getElementById("resultado-aleatorio");
+
 
 botonAleatorio.addEventListener("click", () => {
 
     let pendientes = [];
+
 
     juegos.forEach(consola => {
 
@@ -326,16 +334,6 @@ botonAleatorio.addEventListener("click", () => {
     pendientes[Math.floor(Math.random() * pendientes.length)];
 
 
-   resultadoAleatorio.classList.add("animando");
-
-resultadoAleatorio.innerHTML = `
-🎲 Buscando...
-`;
-
-setTimeout(() => {
-
-    resultadoAleatorio.classList.remove("animando");
-
     resultadoAleatorio.innerHTML = `
         🎉 Tu juego elegido:
 
@@ -348,34 +346,9 @@ setTimeout(() => {
         📀 ${elegido.consola}
     `;
 
-}, 1500);
-
 });
-function exportarProgreso() {
-
-    let datos = {};
-
-    for (let i = 0; i < localStorage.length; i++) {
-
-        let clave = localStorage.key(i);
-
-        datos[clave] = localStorage.getItem(clave);
-
-    }
 
 
-    let archivo = new Blob(
-        [JSON.stringify(datos, null, 2)],
-        { type: "application/json" }
-    );
-
-
-    let enlace = document.createElement("a");
-
-    enlace.href = URL.createObjectURL(archivo);
-
-    enlace.download = "GameVault_progreso.json";
-
-    enlace.click();
-
-}
+// Ejecutar al cargar
+actualizarProgresoTotal();
+mostrarUltimosCompletados();
