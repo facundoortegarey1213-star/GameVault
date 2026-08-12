@@ -6,8 +6,18 @@
     <title>GameVault</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <!-- Reproductor de Música -->
+    <div class="contenedor-musica">
+        <audio id="musica-fondo"></audio>
+        <div id="info-musica" class="info-musica">🎵 Reproductor apagado</div>
+        <div class="controles-musica">
+            <button id="btn-prev">⏮️</button>
+            <button id="btn-musica">▶️ Reproducir</button>
+            <button id="btn-next">⏭️</button>
+        </div>
+    </div>
 
     <header>
         <h1>🎮 GameVault</h1>
@@ -19,44 +29,77 @@
         <h2>Selecciona una consola</h2>
 
         <div class="consolas">
-    <button class="nintendo">NES</button>
-    <button class="nintendo">SNES</button>
-    <button class="sega">SEGA Mega Drive</button>
-    <button class="nintendo">Game Boy</button>
-    <button class="playstation">PlayStation</button>
-    <button class="nintendo">Nintendo 64</button>
-    <button class="nintendo">Game Boy Color</button>
-    <button class="playstation">PlayStation 2</button>
-    <button class="sega">Dreamcast</button>
-    <button class="nintendo">GameCube</button>
-    <button class="nintendo">Game Boy Advance</button>
-    <button class="nintendo">Nintendo Wii</button>
-    <button class="nintendo">Nintendo DS</button>
-    <button class="psp">PSP</button>
-    <button class="pc">PC</button>
-</div>
+            <button class="nintendo">NES</button>
+            <button class="nintendo">SNES</button>
+            <button class="sega">SEGA Mega Drive</button>
+            <button class="sega">Sega CD</button>
+            <button class="sega">Sega Saturn</button>
+            <button class="nintendo">Game Boy</button>
+            <button class="playstation">PlayStation</button>
+            <button class="nintendo">Nintendo 64</button>
+            <button class="nintendo">Game Boy Color</button>
+            <button class="playstation">PlayStation 2</button>
+            <button class="sega">Dreamcast</button>
+            <button class="nintendo">GameCube</button>
+            <button class="nintendo">Game Boy Advance</button>
+            <button class="nintendo">Nintendo Wii</button>
+            <button class="nintendo">Nintendo DS</button>
+            <button class="nintendo">Nintendo 3DS</button>
+            <button class="psp">PSP</button>
+            <button class="pc">PC</button>
+            <button class="arcade">Arcade</button>
+            <button class="android">Android</button>
+        </div>
     </main>
+
     <div id="contador"></div>
     <div id="progreso-total"></div>
     <div id="barra-contenedor">
-    <div id="barra-progreso"></div>
-</div>
-<div id="ultimos-completados"></div>
-<button class="boton-archivo" onclick="exportarProgreso()">💾 Exportar progreso</button>
+        <div id="barra-progreso"></div>
+    </div>
+    <div id="ultimos-completados"></div>
 
-<input type="file" id="importarArchivo" style="display:none" onchange="importarProgreso(event)">
+    <!-- Seccion de Logros -->
+    <div id="contenedor-logros">
+        <h2>🏆 Logros Desbloqueados</h2>
+        <div id="grid-logros">
+            <div class="logro bloqueado" id="logro-1">
+                <span class="emoji">🥉</span>
+                <div class="logro-info">
+                    <h4>Primer Paso</h4>
+                    <p>Completá 1 juego</p>
+                </div>
+            </div>
+            <div class="logro bloqueado" id="logro-10">
+                <span class="emoji">🥈</span>
+                <div class="logro-info">
+                    <h4>Gamer Dedicado</h4>
+                    <p>Completá 10 juegos</p>
+                </div>
+            </div>
+            <div class="logro bloqueado" id="logro-25">
+                <span class="emoji">🥇</span>
+                <div class="logro-info">
+                    <h4>Coleccionista</h4>
+                    <p>Completá 25 juegos</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<button class="boton-archivo" onclick="document.getElementById('importarArchivo').click()">
-📂 Importar progreso
-</button>
+    <button class="boton-archivo" onclick="exportarProgreso()">💾 Exportar progreso</button>
 
-<div id="porcentaje"></div>
-<input type="text" id="buscador" placeholder="Buscar juego...">
-<button id="juego-aleatorio">
-🎲 ¿Qué juego voy a jugar?
-</button>
+    <input type="file" id="importarArchivo" style="display:none" onchange="importarProgreso(event)">
 
-<div id="resultado-aleatorio"></div>
+    <button class="boton-archivo" onclick="document.getElementById('importarArchivo').click()">
+    📂 Importar progreso
+    </button>
+
+    <div id="porcentaje"></div>
+    <input type="text" id="buscador" placeholder="Buscar juego...">
+    <button id="juego-aleatorio">🎲 ¿Qué consola voy a jugar?</button>
+
+    <div id="resultado-aleatorio"></div>
     <div id="lista-juegos"></div>
 
     <script src="juegos.js"></script>
