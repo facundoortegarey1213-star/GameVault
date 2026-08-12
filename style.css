@@ -1,3 +1,4 @@
+/* Base y Body */
 body {
     font-family: Arial, sans-serif;
     background-color: #111;
@@ -6,125 +7,7 @@ body {
     margin: 0;
 }
 
-header {
-    padding: 30px;
-    background-color: #222;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-.consolas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    padding: 40px;
-}
-button {
-    padding: 30px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 20px;
-    border: 2px solid #555;
-    color: white;
-    transition: 0.3s;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
-}
-.nintendo {
-    background-color: #e60012;
-}
-
-.playstation {
-    background-color: #003791;
-}
-
-.sega {
-    background-color: #0055aa;
-}
-
-.psp {
-    background-color: #6b2d8b;
-}
-
-.pc {
-    background-color: #107c10;
-}
-
-button:hover {
-    transform: translateY(-8px);
-    background-color: #333;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.7);
-}
-
-button:hover {
-    transform: scale(1.05);
-    background-color: #333;
-}
-#barra-contenedor {
-    width: 80%;
-    height: 25px;
-    background: #ccc;
-    border-radius: 15px;
-    margin: 15px auto;
-    overflow: hidden;
-}
-
-#barra-progreso {
-    height: 100%;
-    width: 0%;
-    background: #4CAF50;
-    border-radius: 15px;
-    transition: width 0.3s;
-}
-
-#porcentaje {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-.nintendo {
-    border-color: #e60012;
-}
-
-.playstation {
-    border-color: #003791;
-}
-
-.sega {
-    border-color: #0055aa;
-}
-
-.psp {
-    border-color: #6b2d8b;
-}
-
-.pc {
-    border-color: #107c10;
-}
-#lista-juegos {
-    margin: 30px auto;
-    padding: 25px;
-    max-width: 800px;
-    background-color: #1b1b1b;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-    border: 1px solid #444;
-}
-
-#lista-juegos p {
-    background-color: #222;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: left;
-    margin: 10px 0;
-    transition: 0.2s;
-}
-
-#lista-juegos p:hover {
-    transform: translateX(5px);
-    background-color: #333;
-}
+/* Header */
 header {
     padding: 40px;
     background: linear-gradient(135deg, #222, #111);
@@ -141,6 +24,74 @@ header p {
     color: #aaa;
     font-size: 18px;
 }
+
+/* Grilla de Consolas */
+.consolas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.consolas button {
+    color: white;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.consolas button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.7);
+}
+
+.consolas button:active {
+    transform: scale(0.95);
+}
+
+/* Colores por marca/plataforma */
+.nintendo {
+    background-color: #e60012;
+    border-color: #e60012;
+}
+
+.playstation {
+    background-color: #003791;
+    border-color: #003791;
+}
+
+.sega {
+    background-color: #0055aa;
+    border-color: #0055aa;
+}
+
+.psp {
+    background-color: #6b2d8b;
+    border-color: #6b2d8b;
+}
+
+.pc {
+    background-color: #107c10;
+    border-color: #107c10;
+}
+
+.arcade {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+}
+
+.android {
+    background-color: #3ddc84;
+    border-color: #3ddc84;
+    color: #000 !important;
+}
+
+/* Barra de progreso global */
 #barra-contenedor {
     width: 80%;
     max-width: 600px;
@@ -164,49 +115,34 @@ header p {
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
-.consolas button {
-    color: white;
-    padding: 18px;
-    font-size: 17px;
-    font-weight: bold;
-    border-radius: 15px;
+
+/* Lista de Juegos y Items */
+#lista-juegos {
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 800px;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     border: 1px solid #444;
-    transition: 0.25s;
 }
 
-.consolas button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
-}
-
-.consolas button:active {
-    transform: scale(0.95);
-}
-
-.consolas button:hover {
-    transform: translateY(-5px);
-    background-color: #333;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
-}
-
-.consolas button:active {
-    transform: scale(0.95);
-}
-.boton-archivo {
+#lista-juegos p {
     background-color: #222;
-    color: white;
-    border: 2px solid #555;
-    padding: 15px 25px;
-    margin: 10px;
-    border-radius: 15px;
-    font-size: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 10px 0;
+    transition: 0.2s;
 }
 
-.boton-archivo:hover {
+#lista-juegos p:hover {
+    transform: translateX(5px);
     background-color: #333;
-    transform: translateY(-3px);
 }
+
 .juego-item {
     display: flex;
     align-items: center;
@@ -227,30 +163,65 @@ header p {
     width: 20px;
     height: 20px;
 }
+
 .juego-item input:checked + span {
     color: #64dd17;
     font-weight: bold;
     text-shadow: 0 0 8px rgba(100, 221, 23, 0.8);
     transition: all 0.3s ease;
 }
-#juego-aleatorio {
-    background: #222;
+
+/* Estilos de la Ficha */
+.btn-ficha {
+    background: linear-gradient(135deg, #1b1b1b, #222);
+    color: #64dd17;
+    border: 2px solid #64dd17;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(100, 221, 23, 0.2);
+}
+
+.btn-ficha:hover {
+    background: #64dd17;
+    color: #111;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 15px rgba(100, 221, 23, 0.6);
+}
+
+.btn-ficha:active {
+    transform: scale(0.95);
+}
+
+.ficha-card {
+    display: none;
+    background: #111;
+    border: 1px dashed #444;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+/* Botones de acción y Ruleta */
+.boton-archivo, #juego-aleatorio {
+    background-color: #222;
     color: white;
     border: 2px solid #555;
-    padding: 18px 30px;
+    padding: 15px 25px;
+    margin: 10px;
     border-radius: 15px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
-    margin: 20px 0;
     transition: 0.3s;
     box-shadow: 0 8px 15px rgba(0,0,0,0.5);
 }
 
-#juego-aleatorio:hover {
-    background: #333;
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.7);
+.boton-archivo:hover, #juego-aleatorio:hover {
+    background-color: #333;
+    transform: translateY(-3px);
 }
 
 #resultado-aleatorio {
@@ -263,22 +234,137 @@ header p {
     font-size: 24px;
     font-weight: bold;
 }
+
 .animando {
     animation: elegirJuego 0.15s infinite;
 }
 
 @keyframes elegirJuego {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+/* Logros y Medallas */
+#contenedor-logros {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #1b1b1b;
+    border: 1px solid #444;
+    border-radius: 20px;
+}
 
-    0% {
-        transform: scale(1);
-    }
+#contenedor-logros h2 {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+}
 
-    50% {
-        transform: scale(1.05);
-    }
+#grid-logros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
-    100% {
-        transform: scale(1);
-    }
+.logro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #222;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    transition: all 0.4s ease;
+}
 
+.logro .emoji {
+    font-size: 25px;
+}
+
+.logro-info h4 {
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.logro-info p {
+    margin: 0;
+    font-size: 11px;
+    color: #888;
+    text-align: left;
+}
+
+/* Cuando esta bloqueado se ve apagado */
+.logro.bloqueado {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+/* Cuando se desbloquea brilla en verde */
+.logro.desbloqueado {
+    opacity: 1;
+    filter: grayscale(0%);
+    border-color: #64dd17;
+    box-shadow: 0 0 12px rgba(100, 221, 23, 0.4);
+    transform: translateY(-2px);
+}
+/* Botón de Música */
+#btn-musica {
+    background: #222;
+    color: #fff;
+    border: 2px solid #555;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#btn-musica:hover {
+    background: #333;
+    border-color: #64dd17;
+    transform: scale(1.05);
+}
+
+/* Estilo cuando la música está sonando */
+#btn-musica.sonando {
+    border-color: #64dd17;
+    background: #1b3a10;
+    color: #64dd17;
+    box-shadow: 0 0 10px rgba(100, 221, 23, 0.3);
+}
+/* Reproductor de Música */
+.contenedor-musica {
+    background: #1e1e1e;
+    border: 2px solid #333;
+    padding: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* El cartelito con el tema */
+.info-musica {
+    color: #64dd17;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.controles-musica button {
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.controles-musica button:hover {
+    background: #444;
+    border-color: #64dd17;
 }
