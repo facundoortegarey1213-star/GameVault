@@ -21,13 +21,28 @@
 
     <header>
         <h1>🎮 GameVault</h1>
-        <p>Mi colección de juegos completados y pendientes 🎮</p>
-        <p>Mi biblioteca personal de juegos pendientes</p>
+        <p>Mi biblioteca personal de juegos</p>
     </header>
 
+    <!-- Panel de Stats -->
+    <div id="panel-estadisticas" class="card-stats">
+        <h2>📊 Mis Stats</h2>
+        <div class="grid-stats">
+            <p>⭐ Nota media: <strong id="stat-nota">0/5</strong></p>
+            <p>🏆 Más jugada: <strong id="stat-consola">-</strong></p>
+        </div>
+    </div>
+<!-- SECCIÓN TOP 10 FAVORITOS -->
+<section id="seccion-top10" class="top10-container">
+    <h2>🏆 Top 10 Favoritos (Hall of Fame)</h2>
+    <p style="color: #aaa; font-size: 0.9em; margin-bottom: 15px;">Elegí tus 10 juegos preferidos de la vida.</p>
+
+    <div id="lista-top10" class="top10-grid">
+        <!-- Se genera automáticamente desde JS -->
+    </div>
+</section>
     <main>
         <h2>Selecciona una consola</h2>
-
         <div class="consolas">
             <button class="nintendo">NES</button>
             <button class="nintendo">SNES</button>
@@ -48,7 +63,6 @@
             <button class="psp">PSP</button>
             <button class="pc">PC</button>
             <button class="arcade">Arcade</button>
-            <button class="android">Android</button>
         </div>
     </main>
 
@@ -57,9 +71,10 @@
     <div id="barra-contenedor">
         <div id="barra-progreso"></div>
     </div>
+
     <div id="ultimos-completados"></div>
 
-    <!-- Seccion de Logros -->
+    <!-- Logros -->
     <div id="contenedor-logros">
         <h2>🏆 Logros Desbloqueados</h2>
         <div id="grid-logros">
@@ -87,23 +102,21 @@
         </div>
     </div>
 
-    <button class="boton-archivo" onclick="exportarProgreso()">💾 Exportar progreso</button>
-
-    <input type="file" id="importarArchivo" style="display:none" onchange="importarProgreso(event)">
-
-    <button class="boton-archivo" onclick="document.getElementById('importarArchivo').click()">
-    📂 Importar progreso
-    </button>
+    <div style="margin: 15px 0;">
+        <button class="boton-archivo" onclick="exportarProgreso()">💾 Exportar progreso</button>
+        <input type="file" id="importarArchivo" style="display:none" onchange="importarProgreso(event)">
+        <button class="boton-archivo" onclick="document.getElementById('importarArchivo').click()">📂 Importar progreso</button>
+    </div>
 
     <div id="porcentaje"></div>
     <input type="text" id="buscador" placeholder="Buscar juego...">
     <button id="juego-aleatorio">🎲 ¿Qué consola voy a jugar?</button>
 
     <div id="resultado-aleatorio"></div>
+
     <div id="lista-juegos"></div>
 
     <script src="juegos.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
