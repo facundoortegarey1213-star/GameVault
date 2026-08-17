@@ -78,8 +78,11 @@ function obtenerTodosLosJuegos() {
                     const anio = typeof juego === 'object' ? (juego?.anio || juego?.year || "N/A") : "N/A";
                     const genero = typeof juego === 'object' ? (juego?.genero || "N/A") : "N/A";
                     const desarrolladora = typeof juego === 'object' ? (juego?.desarrolladora || juego?.developer || "N/A") : "N/A";
+                    const hltbMain = typeof juego === 'object' ? (juego?.hltbMain || juego?.hltb) : null;
+                    const hltb100 = typeof juego === 'object' ? juego?.hltb100 : null;
+
                     if (nombre) {
-                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, consola: consolaKey });
+                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, hltbMain, hltb100, consola: consolaKey });
                     }
                 });
             }
@@ -97,8 +100,11 @@ function obtenerTodosLosJuegos() {
                     const anio = typeof juego === 'object' ? (juego?.anio || juego?.year || "N/A") : "N/A";
                     const genero = typeof juego === 'object' ? (juego?.genero || "N/A") : "N/A";
                     const desarrolladora = typeof juego === 'object' ? (juego?.desarrolladora || juego?.developer || "N/A") : "N/A";
+                    const hltbMain = typeof juego === 'object' ? (juego?.hltbMain || juego?.hltb) : null;
+                    const hltb100 = typeof juego === 'object' ? juego?.hltb100 : null;
+
                     if (nombre) {
-                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, consola: nombreConsola });
+                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, hltbMain, hltb100, consola: nombreConsola });
                     }
                 });
             } else if (item && typeof item === 'object') {
@@ -108,8 +114,11 @@ function obtenerTodosLosJuegos() {
                 const genero = item.genero || "N/A";
                 const desarrolladora = item.desarrolladora || item.developer || "N/A";
                 const nombreConsola = item.plataforma || item.consola || "Consola";
+                const hltbMain = item.hltbMain || item.hltb;
+                const hltb100 = item.hltb100;
+
                 if (nombre) {
-                    listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, consola: nombreConsola });
+                    listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, hltbMain, hltb100, consola: nombreConsola });
                 }
             }
         });
@@ -169,7 +178,7 @@ botones.forEach(boton => {
                         
                         <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid #333; display: flex; flex-direction: column; gap: 8px;">
                             <label style="color: #64b5f6; font-weight: bold;">📌 Estado actual: 
-                                <select onchange="localStorage.setItem('${nombreEscapado}_estado', this.value);" style="background: #222; color: #fff; border: 1px solid #444; padding: 4px; border-radius: 4px; margin-left: 5px;">
+                                <select onchange="cambiarEstadoJuego('${nombreEscapado}', this.value)" style="background: #222; color: #fff; border: 1px solid #444; padding: 4px; border-radius: 4px; margin-left: 5px;">
                                     <option value="Pendiente" ${estadoJuego.toLowerCase() === "pendiente" ? "selected":""}>⏳ Pendiente</option>
                                     <option value="Jugando" ${estadoJuego.toLowerCase() === "jugando" ? "selected":""}>🎮 Jugando</option>
                                     <option value="Completado" ${estadoJuego.toLowerCase() === "completado" ? "selected":""}>🏆 Completado</option>
@@ -214,6 +223,12 @@ botones.forEach(boton => {
     });
 });
 
+// --- Cambiar Estado ---
+function cambiarEstadoJuego(nombreJuego, estado) {
+    localStorage.setItem(`${nombreJuego}_estado`, estado);
+    cargarJuegoActual();
+}
+
 // --- Guardar Datos ---
 function guardarNotaPersonal(nombreJuego, texto) {
     localStorage.setItem(nombreJuego + "_nota_texto", texto);
@@ -227,6 +242,7 @@ function guardarDetallesJuego(nombreJuego) {
     localStorage.setItem(`${nombreJuego}_nota`, nota);
 
     actualizarEstadisticas();
+    cargarJuegoActual();
 }
 
 function guardarJuego(juego, marcado) {
@@ -234,15 +250,18 @@ function guardarJuego(juego, marcado) {
         localStorage.setItem(juego, "completado");
         let fecha = new Date().toLocaleDateString();
         localStorage.setItem(juego + "_fecha", fecha);
+        localStorage.setItem(juego + "_estado", "Completado");
     } else {
         localStorage.removeItem(juego);
         localStorage.removeItem(juego + "_fecha");
+        localStorage.setItem(juego + "_estado", "Pendiente");
     }
 
     actualizarProgresoTotal();
     mostrarUltimosCompletados();
     verificarLogros();
     actualizarEstadisticas();
+    cargarJuegoActual();
 }
 
 // --- Importar / Exportar ---
@@ -352,7 +371,6 @@ function actualizarEstadisticas() {
 if (buscador) {
     buscador.addEventListener("input", () => {
         let texto = buscador.value.toLowerCase().trim();
-        let resultados = [];
 
         if (texto === "") {
             listaJuegos.innerHTML = "";
@@ -360,6 +378,7 @@ if (buscador) {
         }
 
         const todosLosJuegos = obtenerTodosLosJuegos();
+        let resultados = [];
 
         todosLosJuegos.forEach(juego => {
             if (juego.nombre.toLowerCase().includes(texto)) {
@@ -521,121 +540,7 @@ if (temaGuardado) {
     if (select) select.value = temaGuardado;
 }
 
-// --- Reproductor de Música ---
-const playlist = [
-    { titulo: "Delfino Plaza From Super Mario Sunshine", archivo: "musica 1.mp3" },
-    { titulo: "It's Going Down Now From Persona 3 Reload", archivo: "musica 2.mp3" },
-    { titulo: "Chemical Plant Zone From Sonic The Hedgehog 2", archivo: "musica 3.mp3" },
-    { titulo: "Gerudo Valley From The Legend of Zelda: Ocarina Of Time", archivo: "musica 4.mp3" },
-    { titulo: "Dire, Dire Docks From Super Mario 64", archivo: "musica 5.mp3" },
-    { titulo: "Main Theme From Halo: Combat Evolved", archivo: "musica 6.mp3" },
-    { titulo: "Athletic Theme From Super Mario Bros 3", archivo: "musica 7.mp3" },
-    { titulo: "Lost Woods From The Legend of Zelda: Ocarina of Time", archivo: "musica 8.mp3" },
-    { titulo: "The Tragic Prince From Castlevania: Symphony of the Night", archivo: "musica 9.mp3" },
-    { titulo: "Escape from the City From Sonic Adventure 2", archivo: "musica 10.mp3" },
-    { titulo: "Song of Healing From The Legend of Zelda: Majora's Mask", archivo: "musica 11.mp3" },
-    { titulo: "Wily Castle From Mega Man 2", archivo: "musica 12.mp3" },
-    { titulo: "Gourmet Race From Kirby Super Star", archivo: "musica 13.mp3" },
-    { titulo: "Korobeiniki From Tetris", archivo: "musica 14.mp3" },
-    { titulo: "Aquatic Ambience From Donkey Kong Country", archivo: "musica 15.mp3" },
-    { titulo: "Lavender Town From Pokémon Red & Blue", archivo: "musica 16.mp3" },
-    { titulo: "Hydrogen From Hotline Miami", archivo: "musica 17.mp3" },
-    { titulo: "Megalovania From Undertale", archivo: "musica 18.mp3" },
-    { titulo: "The Only Thing They Fear Is You From Doom Eternal", archivo: "musica 19.mp3" },
-    { titulo: "Last Surprise From Persona 5", archivo: "musica 20.mp3"},
-    { titulo: "Zelda's Lullaby From The Legend of Zelda: Skyward Sword", archivo: "musica 21.mp3" },
-    { titulo: "Sky Sanctuary (Modern) From Sonic Generations", archivo: "musica 22.mp3"},
-    { titulo: "Peaceful Days From Chrono Trigger", archivo: "musica 23.mp3" },
-    { titulo: "Survivor From DBZ Budokai Tenkaichi 3", archivo: "musica 24.mp3" },
-];
-
-let indiceActual = Math.floor(Math.random() * playlist.length);
-
-const audio = document.getElementById('musica-fondo');
-const btnPlay = document.getElementById('btn-musica');
-const btnNext = document.getElementById('btn-next');
-const btnPrev = document.getElementById('btn-prev');
-const infoMusica = document.getElementById('info-musica');
-
-function cargarCancion(index) {
-    if (!audio || !infoMusica) return;
-    audio.src = playlist[index].archivo;
-    infoMusica.textContent = `🎵 Tema: ${playlist[index].titulo}`;
-}
-
-function reproducir() {
-    if (!audio) return;
-    audio.play().then(() => {
-        if (btnPlay) btnPlay.textContent = '⏸️ Pausa';
-        if (infoMusica) infoMusica.textContent = `🎵 Sonando: ${playlist[indiceActual].titulo}`;
-    }).catch(() => {
-        if (btnPlay) btnPlay.textContent = '▶️ Reproducir';
-    });
-}
-
-function pausar() {
-    if (!audio) return;
-    audio.pause();
-    if (btnPlay) btnPlay.textContent = '▶️ Reproducir';
-    if (infoMusica) infoMusica.textContent = `🎵 En pausa: ${playlist[indiceActual].titulo}`;
-}
-
-function cancionAleatoria() {
-    if (playlist.length <= 1) return;
-    let nuevoIndice;
-    do {
-        nuevoIndice = Math.floor(Math.random() * playlist.length);
-    } while (nuevoIndice === indiceActual);
-    indiceActual = nuevoIndice;
-}
-
-if (btnPlay && audio) {
-    cargarCancion(indiceActual);
-
-    const activarAudioAlClic = () => {
-        if (audio.paused) {
-            reproducir();
-        }
-        document.removeEventListener('click', activarAudioAlClic);
-    };
-    document.addEventListener('click', activarAudioAlClic);
-
-    btnPlay.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (audio.paused) {
-            reproducir();
-        } else {
-            pausar();
-        }
-    });
-
-    btnNext?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        cancionAleatoria();
-        cargarCancion(indiceActual);
-        reproducir();
-    });
-
-    btnPrev?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        cancionAleatoria();
-        cargarCancion(indiceActual);
-        reproducir();
-    });
-
-    audio.addEventListener('ended', () => {
-        cancionAleatoria();
-        cargarCancion(indiceActual);
-        reproducir();
-    });
-}
-
-// --- Carga Inicial ---
-actualizarProgresoTotal();
-mostrarUltimosCompletados();
-actualizarEstadisticas();
-verificarLogros();
-// --- TOP 10 FAVORITOS FIX ---
+// --- TOP 10 FAVORITOS ---
 function renderizarTop10() {
     const contenedor = document.getElementById("lista-top10");
     if (!contenedor) return;
@@ -646,7 +551,6 @@ function renderizarTop10() {
         return;
     }
 
-    // Ordenar alfabéticamente sin romper si falta algún nombre
     todos.sort((a, b) => (a.nombre || "").localeCompare(b.nombre || ""));
 
     let html = "";
@@ -682,6 +586,40 @@ function guardarPuestoTop10(puesto, valor) {
     }
 }
 
-// Ejecutar al cargar
-document.addEventListener("DOMContentLoaded", renderizarTop10);
-renderizarTop10();
+// --- Sección "Jugando Ahora" ---
+function cargarJuegoActual() {
+    const seccion = document.getElementById("seccion-jugando-ahora");
+    if (!seccion) return;
+
+    const todos = obtenerTodosLosJuegos();
+    const juego = todos.find(j => {
+        const estado = localStorage.getItem(`${j.nombre}_estado`);
+        return estado && estado.toLowerCase() === "jugando";
+    });
+
+    if (!juego) {
+        seccion.style.display = "none";
+        return;
+    }
+
+    seccion.style.display = "block";
+
+    const elemTitulo = document.getElementById("jugando-titulo");
+    if (elemTitulo) elemTitulo.textContent = juego.nombre;
+
+    const elemConsola = document.getElementById("jugando-consola");
+    if (elemConsola) elemConsola.textContent = juego.consola;
+
+    const elemDuracion = document.getElementById("jugando-duracion");
+    if (elemDuracion) elemDuracion.textContent = juego.duracion || "N/A";
+}
+
+// --- Carga Inicial ---
+document.addEventListener("DOMContentLoaded", () => {
+    actualizarProgresoTotal();
+    mostrarUltimosCompletados();
+    verificarLogros();
+    actualizarEstadisticas();
+    renderizarTop10();
+    cargarJuegoActual();
+});

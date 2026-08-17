@@ -8,21 +8,22 @@
 </head>
 <body>
 
-    <!-- Reproductor de Música -->
-    <div class="contenedor-musica">
-        <audio id="musica-fondo"></audio>
-        <div id="info-musica" class="info-musica">🎵 Reproductor apagado</div>
-        <div class="controles-musica">
-            <button id="btn-prev">⏮️</button>
-            <button id="btn-musica">▶️ Reproducir</button>
-            <button id="btn-next">⏭️</button>
-        </div>
-    </div>
-
     <header>
         <h1>🎮 GameVault</h1>
         <p>Mi biblioteca personal de juegos</p>
     </header>
+
+    <!-- SECCIÓN JUEGO ACTUAL -->
+    <section id="seccion-jugando-ahora" class="card-jugando">
+        <div class="header-jugando">
+            <span class="badge-jugando">🔥 JUGANDO AHORA</span>
+        </div>
+        <div class="contenido-jugando" style="text-align: center; width: 100%;">
+            <h2 id="jugando-titulo">Cargando...</h2>
+            <p class="consola-tag" id="jugando-consola">-</p>
+            <p style="margin-top: 12px; color: #aaa; font-size: 1em;">⏱️ Duración: <strong id="jugando-duracion" style="color: #64dd17;">-</strong></p>
+        </div>
+    </section>
 
     <!-- Panel de Stats -->
     <div id="panel-estadisticas" class="card-stats">
@@ -32,15 +33,17 @@
             <p>🏆 Más jugada: <strong id="stat-consola">-</strong></p>
         </div>
     </div>
-<!-- SECCIÓN TOP 10 FAVORITOS -->
-<section id="seccion-top10" class="top10-container">
-    <h2>🏆 Top 10 Favoritos (Hall of Fame)</h2>
-    <p style="color: #aaa; font-size: 0.9em; margin-bottom: 15px;">Elegí tus 10 juegos preferidos de la vida.</p>
 
-    <div id="lista-top10" class="top10-grid">
-        <!-- Se genera automáticamente desde JS -->
-    </div>
-</section>
+    <!-- SECCIÓN TOP 10 FAVORITOS -->
+    <section id="seccion-top10" class="top10-container">
+        <h2>🏆 Top 10 Favoritos (Hall of Fame)</h2>
+        <p style="color: #aaa; font-size: 0.9em; margin-bottom: 15px;">Elegí tus 10 juegos preferidos de la vida.</p>
+
+        <div id="lista-top10" class="top10-grid">
+            <!-- Se genera automáticamente desde JS -->
+        </div>
+    </section>
+
     <main>
         <h2>Selecciona una consola</h2>
         <div class="consolas">

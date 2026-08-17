@@ -1272,144 +1272,144 @@ const juegos = [
     {
       titulo: "Endless Ocean: Blue World",
       duracion: "15h",
-      anio: "2009",
+     anio: "2009",
       genero: "Aventura / Simulación",
       desarrolladora: "Arika"
     }
   ]
 },
- {
+{
   consola: "Nintendo DS",
   lista: [
     {
       titulo: "The Legend of Zelda: Phantom Hourglass",
       duracion: "13.5h",
-      anio: "2007",
-      genero: "Acción / Aventura",
-      desarrolladora: "Nintendo EAD"
-    },
-    {
-      titulo: "New Super Mario Bros.",
-      duracion: "7h",
-      anio: "2006",
-      genero: "Plataformas",
-      desarrolladora: "Nintendo EAD"
-    },
-    {
-      titulo: "Castlevania: Portrait of Ruin",
-      duracion: "10h",
-      anio: "2006",
-      genero: "Metroidvania / Acción",
-      desarrolladora: "Konami"
-    },
-    {
-      titulo: "Dragon Quest V: Hand of the Heavenly Bride",
-      duracion: "30.5h",
-      anio: "2008",
-      genero: "JRPG",
-      desarrolladora: "ArtePiazza / Square Enix"
-    },
-    {
-      titulo: "GTA: Chinatown Wars",
-      duracion: "11h",
-      anio: "2009",
-      genero: "Acción / Mundo Abierto",
-      desarrolladora: "Rockstar Leeds"
-    },
-    {
-      titulo: "Osu! Tatakae! Ouendan!",
-      duracion: "3.5h",
-      anio: "2005",
-      genero: "Rítmico",
-      desarrolladora: "iNiS"
-    },
-    {
-      titulo: "Mario & Luigi: Bowser's Inside Story",
-      duracion: "22.5h",
-      anio: "2009",
-      genero: "JRPG / Acción",
-      desarrolladora: "AlphaDream"
-    },
-    {
-      titulo: "Ace Attorney - Trials and Tribulations",
-      duracion: "20h",
-      anio: "2007",
-      genero: "Aventura Visual / Misterio",
-      desarrolladora: "Capcom"
-    },
-    {
-      titulo: "Professor Layton and the Curious Village",
-      duracion: "12h",
-      anio: "2007",
-      genero: "Puzle / Aventura",
-      desarrolladora: "Level-5"
-    },
-    {
-      titulo: "Jump Ultimate Stars",
-      duracion: "9.5h",
-      anio: "2006",
-      genero: "Lucha",
-      desarrolladora: "Ganbarion"
-    },
-    {
-      titulo: "SMT: Devil Survivor",
-      duracion: "31.5h",
-      anio: "2009",
-      genero: "RPG Táctico",
-      desarrolladora: "Atlus"
-    },
-    {
-      titulo: "Ninja Gaiden: Dragon Sword",
-      duracion: "6h",
-      anio: "2008",
-      genero: "Acción / Hack and Slash",
-      desarrolladora: "Team Ninja"
-    },
-    {
-      titulo: "Trauma Center: Under the Knife 2",
-      duracion: "9.5h",
-      anio: "2008",
-      genero: "Simulación / Puzle",
-      desarrolladora: "Vanguard Works / Atlus"
-    },
-    {
-      titulo: "Lock's Quest",
-      duracion: "13.5h",
-      anio: "2008",
-      genero: "Estrategia / Tower Defense",
-      desarrolladora: "5th Cell"
-    },
-    {
-      titulo: "Sonic Colors",
-      duracion: "4.5h",
-      anio: "2010",
-      genero: "Plataformas",
-      desarrolladora: "Dimps / Sonic Team"
-    },
-    {
-      titulo: "Age of Empires: The Age of Kings",
-      duracion: "18h",
-      anio: "2006",
-      genero: "Estrategia por Turnos",
-      desarrolladora: "Backbone Entertainment"
-    },
-    {
-      titulo: "Yoshi's Island DS",
-      duracion: "9.5h",
-      anio: "2006",
-      genero: "Plataformas",
-      desarrolladora: "Artoon"
-    },
-    {
-      titulo: "Diddy Kong Racing DS",
-      duracion: "6.5h",
+      año: "2007",
+        genero: "Acción / Aventura",
+        desarrolladora: "Nintendo EAD"
+      },
+      {
+        titulo: "New Super Mario Bros.",
+        duracion: "7h",
+        anio: "2006",
+        genero: "Plataformas",
+        desarrolladora: "Nintendo EAD"
+      },
+      {
+        titulo: "Castlevania: Portrait of Ruin",
+        duracion: "10h",
+        anio: "2006",
+        genero: "Metroidvania / Acción",
+        desarrolladora: "Konami"
+      },
+      {
+        titulo: "Dragon Quest V: Hand of the Heavenly Bride",
+        duracion: "30.5h",
+        anio: "2008",
+        genero: "JRPG",
+        desarrolladora: "ArtePiazza / Square Enix"
+      },
+      {
+        titulo: "GTA: Chinatown Wars",
+        duracion: "11h",
+        anio: "2009",
+        genero: "Acción / Mundo Abierto",
+        desarrolladora: "Rockstar Leeds"
+      },
+      {
+        titulo: "Elite Beat Agents",
+        duracion: "7h",
+        anio: "2006",
+        genero: "Rítmico",
+        desarrolladora: "iNiS / Nintendo"
+      },
+      {
+        titulo: "Mario & Luigi: Bowser's Inside Story",
+        duracion: "22.5h",
+        anio: "2009",
+        genero: "JRPG / Acción",
+        desarrolladora: "AlphaDream"
+      },
+      {
+        titulo: "Ace Attorney - Trials and Tribulations",
+        duracion: "20h",
+        anio: "2007",
+        genero: "Aventura Visual / Misterio",
+        desarrolladora: "Capcom"
+      },
+      {
+        titulo: "Professor Layton and the Curious Village",
+        duracion: "12h",
+        anio: "2007",
+        genero: "Puzle / Aventura",
+        desarrolladora: "Level-5"
+      },
+      {
+        titulo: "Jump Ultimate Stars",
+        duracion: "9.5h",
+        anio: "2006",
+        genero: "Lucha",
+        desarrolladora: "Ganbarion"
+      },
+      {
+        titulo: "SMT: Devil Survivor",
+        duracion: "31.5h",
+        anio: "2009",
+        genero: "RPG Táctico",
+        desarrolladora: "Atlus"
+      },
+      {
+        titulo: "Ninja Gaiden: Dragon Sword",
+        duracion: "6h",
+        anio: "2008",
+        genero: "Acción / Hack and Slash",
+        desarrolladora: "Team Ninja"
+      },
+      {
+        titulo: "Trauma Center: Under the Knife 2",
+        duracion: "9.5h",
+        anio: "2008",
+        genero: "Simulación / Puzle",
+        desarrolladora: "Vanguard Works / Atlus"
+      },
+      {
+        titulo: "Lock's Quest",
+        duracion: "13.5h",
+        anio: "2008",
+        genero: "Estrategia / Tower Defense",
+        desarrolladora: "5th Cell"
+      },
+      {
+        titulo: "Sonic Colors",
+        duracion: "4.5h",
+        anio: "2010",
+        genero: "Plataformas",
+        desarrolladora: "Dimps / Sonic Team"
+      },
+      {
+        titulo: "Age of Empires: The Age of Kings",
+        duracion: "18h",
+        anio: "2006",
+        genero: "Estrategia por Turnos",
+        desarrolladora: "Backbone Entertainment"
+      },
+      {
+        titulo: "Yoshi's Island DS",
+        duracion: "9.5h",
+        anio: "2006",
+        genero: "Plataformas",
+        desarrolladora: "Artoon"
+      },
+      {
+        titulo: "Diddy Kong Racing DS",
+        duracion: "6.5h",
       anio: "2007",
       genero: "Carreras",
       desarrolladora: "Rare"
     }
   ]
 },
-  {
+{
   consola: "PSP",
   lista: [
     {

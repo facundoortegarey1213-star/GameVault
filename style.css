@@ -368,3 +368,115 @@ header p {
     background: #444;
     border-color: #64dd17;
 }
+/* SECCIÓN JUEGO ACTUAL */
+.card-jugando {
+    background: #1e1e24;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.badge-jugando {
+    background: #ff4757;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.contenido-jugando {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.portada-jugando {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.info-jugando {
+    flex: 1;
+}
+
+.info-jugando h2 {
+    margin: 0 0 4px 0;
+    font-size: 1.6rem;
+}
+
+.consola-tag {
+    color: #aaa;
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+}
+
+.stats-jugando {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stat-box {
+    background: #2a2a32;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.stat-box strong {
+    color: #2ed573;
+    font-size: 1.1rem;
+}
+
+.progreso-container {
+    width: 100%;
+}
+
+.progreso-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.barra-bg {
+    width: 100%;
+    height: 10px;
+    background: #2a2a32;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.barra-fill {
+    height: 100%;
+    background: #ffa502;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+/* Responsivo para cel */
+@media (max-width: 600px) {
+    .contenido-jugando {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats-jugando {
+        justify-content: center;
+    }
+}
