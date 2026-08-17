@@ -1396,17 +1396,24 @@ const juegos = [
       {
         titulo: "Yoshi's Island DS",
         duracion: "9.5h",
-        anio: "2006",
-        genero: "Plataformas",
-        desarrolladora: "Artoon"
+      anio: "2006",
+      genero: "Plataformas",
+      desarrolladora: "Artoon"
+    },
+    {
+      titulo: "Diddy Kong Racing DS",
+      duracion: "6.5h",
+      anio: "2007",
+        genero: "Carreras",
+        desarrolladora: "Rare"
       },
       {
-        titulo: "Diddy Kong Racing DS",
-        duracion: "6.5h",
-      anio: "2007",
-      genero: "Carreras",
-      desarrolladora: "Rare"
-    }
+        titulo: "Kirby: Squeak Squad",
+        duracion: "5h",
+        anio: "2006",
+        genero: "Plataformas",
+        desarrolladora: "Flagship / HAL Laboratory"
+      }
   ]
 },
 {
