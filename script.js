@@ -78,11 +78,9 @@ function obtenerTodosLosJuegos() {
                     const anio = typeof juego === 'object' ? (juego?.anio || juego?.year || "N/A") : "N/A";
                     const genero = typeof juego === 'object' ? (juego?.genero || "N/A") : "N/A";
                     const desarrolladora = typeof juego === 'object' ? (juego?.desarrolladora || juego?.developer || "N/A") : "N/A";
-                    const hltbMain = typeof juego === 'object' ? (juego?.hltbMain || juego?.hltb) : null;
-                    const hltb100 = typeof juego === 'object' ? juego?.hltb100 : null;
 
                     if (nombre) {
-                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, hltbMain, hltb100, consola: consolaKey });
+                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, consola: consolaKey });
                     }
                 });
             }
@@ -100,11 +98,9 @@ function obtenerTodosLosJuegos() {
                     const anio = typeof juego === 'object' ? (juego?.anio || juego?.year || "N/A") : "N/A";
                     const genero = typeof juego === 'object' ? (juego?.genero || "N/A") : "N/A";
                     const desarrolladora = typeof juego === 'object' ? (juego?.desarrolladora || juego?.developer || "N/A") : "N/A";
-                    const hltbMain = typeof juego === 'object' ? (juego?.hltbMain || juego?.hltb) : null;
-                    const hltb100 = typeof juego === 'object' ? juego?.hltb100 : null;
 
                     if (nombre) {
-                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, hltbMain, hltb100, consola: nombreConsola });
+                        listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, consola: nombreConsola });
                     }
                 });
             } else if (item && typeof item === 'object') {
@@ -114,11 +110,9 @@ function obtenerTodosLosJuegos() {
                 const genero = item.genero || "N/A";
                 const desarrolladora = item.desarrolladora || item.developer || "N/A";
                 const nombreConsola = item.plataforma || item.consola || "Consola";
-                const hltbMain = item.hltbMain || item.hltb;
-                const hltb100 = item.hltb100;
 
                 if (nombre) {
-                    listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, hltbMain, hltb100, consola: nombreConsola });
+                    listaProcesada.push({ nombre, duracion, anio, genero, desarrolladora, consola: nombreConsola });
                 }
             }
         });
@@ -156,6 +150,12 @@ botones.forEach(boton => {
                 const esJugando = estadoJuego.toLowerCase() === "jugando" ? " 🎮" : "";
                 const nombreEscapado = juego.nombre.replace(/'/g, "\\'");
 
+                // Manejo flexible de duraciones (texto u objeto)
+                const esObjeto = typeof juego.duracion === 'object' && juego.duracion !== null;
+                const durPrincipal = esObjeto ? (juego.duracion.principal || "N/A") : (juego.duracion || "N/A");
+                const durExtras = esObjeto ? juego.duracion.extras : null;
+                const durCompleto = esObjeto ? juego.duracion.completo : null;
+
                 listaJuegos.innerHTML += `
                 <div class="contenedor-juego" style="margin-bottom: 12px;">
                     <p style="display: flex; justify-content: space-between; align-items: center; margin: 0;">
@@ -164,7 +164,7 @@ botones.forEach(boton => {
                             ${guardado === "completado" ? "checked" : ""}
                             onchange="guardarJuego('${nombreEscapado}', this.checked)">
                             
-                            <span>${juego.nombre}${esJugando} ${juego.duracion ? `<small style="color: #aaa; margin-left: 8px;">⏱️ ${juego.duracion}</small>` : ''}</span>
+                            <span>${juego.nombre}${esJugando} ${juego.duracion ? `<small style="color: #aaa; margin-left: 8px;">⏱️ ${durPrincipal}</small>` : ''}</span>
                         </label>
 
                         <button type="button" class="btn-ficha" onclick="toggleFicha(this)">📋 Ficha</button>
@@ -174,6 +174,16 @@ botones.forEach(boton => {
                         <p>📅 <strong>Año:</strong> ${juego.anio}</p>
                         <p>🎭 <strong>Género:</strong> ${juego.genero}</p>
                         <p>🏢 <strong>Desarrolladora:</strong> ${juego.desarrolladora}</p>
+
+                        <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid #222;">
+                            <p style="margin-bottom: 6px;">⏱️ <strong>Tiempos estimados:</strong></p>
+                            <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.9em; color: #ccc; background: #1a1a1a; padding: 8px 12px; border-radius: 4px;">
+                                <p style="margin: 0;">🎯 <strong>Historia principal:</strong> ${durPrincipal}</p>
+                                ${durExtras ? `<p style="margin: 0;">⭐ <strong>Historia + Extras:</strong> ${durExtras}</p>` : ''}
+                                ${durCompleto ? `<p style="margin: 0;">🏆 <strong>Completar al 100%:</strong> ${durCompleto}</p>` : ''}
+                            </div>
+                        </div>
+
                         ${fecha ? `<p style="margin-top: 6px !important; color: #64dd17;">✅ Completado el: ${fecha}</p>` : ''}
                         
                         <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid #333; display: flex; flex-direction: column; gap: 8px;">
@@ -215,7 +225,6 @@ botones.forEach(boton => {
                 </div>
                 `;
             });
-
             if (contador) contador.textContent = "Completados: " + completados + "/" + juegosFiltrados.length;
         } else {
             listaJuegos.innerHTML = "<p>Todavía no hay juegos cargados para " + consolaSeleccionada + "</p>";
@@ -386,7 +395,8 @@ if (buscador) {
                     ? "✅ Completado"
                     : "⬜ Pendiente";
 
-                const duracionStr = juego.duracion ? ` ⏱️ ${juego.duracion}` : '';
+                const durPrincipal = typeof juego.duracion === 'object' && juego.duracion !== null ? juego.duracion.principal : juego.duracion;
+                const duracionStr = durPrincipal ? ` ⏱️ ${durPrincipal}` : '';
                 resultados.push(`${juego.nombre}${duracionStr} (<strong>${juego.consola}</strong>) — ${estado}`);
             }
         });
@@ -611,7 +621,8 @@ function cargarJuegoActual() {
     if (elemConsola) elemConsola.textContent = juego.consola;
 
     const elemDuracion = document.getElementById("jugando-duracion");
-    if (elemDuracion) elemDuracion.textContent = juego.duracion || "N/A";
+    const durPrincipal = typeof juego.duracion === 'object' && juego.duracion !== null ? juego.duracion.principal : juego.duracion;
+    if (elemDuracion) elemDuracion.textContent = durPrincipal || "N/A";
 }
 
 // --- Carga Inicial ---
