@@ -182,20 +182,20 @@ const juegos = [
   {
     consola: "PlayStation 2",
     lista: [
-      { titulo: "Kingdom Hearts", duracion: { principal: "28.5 h", extras: "42 h", completo: "62.5 h" }, anio: 2002, genero: "JRPG / Acción", desarrolladora: "Square" },
+      
       { titulo: "Final Fantasy X", duracion: { principal: "45.5 h", extras: "67 h", completo: "144 h" }, anio: 2001, genero: "JRPG", desarrolladora: "Square" },
-      { titulo: "Spyro: Enter the Dragonfly", duracion: { principal: "9.5 h", extras: "10.5 h", completo: "11.5 h" }, anio: 2002, genero: "Plataformas 3D", desarrolladora: "Check Five Games" },
+
       { titulo: "Sly Cooper and the Thievius Raccoonus", duracion: { principal: "8.5 h", extras: "10 h", completo: "12.5 h" }, anio: 2002, genero: "Plataformas / Sigilo", desarrolladora: "Sucker Punch Productions" },
-      { titulo: "Evil Dead: Regeneration", duracion: { principal: "6 h", extras: "6 h", completo: "6.5 h" }, anio: 2005, genero: "Acción / Hack and Slash", desarrolladora: "Cranky Pants Games" },
+
       { titulo: "God of War", duracion: { principal: "9 h", extras: "10 h", completo: "12 h" }, anio: 2005, genero: "Hack and Slash / Acción", desarrolladora: "Santa Monica Studio" },
-      { titulo: "Metal Gear Solid 2: Substance", duracion: { principal: "13.5 h", extras: "22 h", completo: "47.5 h" }, anio: 2002, genero: "Acción / Sigilo", desarrolladora: "Konami" },
+      
       { titulo: "Ico", duracion: { principal: "6.5 h", extras: "7 h", completo: "8 h" }, anio: 2001, genero: "Aventura / Puzle", desarrolladora: "Team Ico" },
       { titulo: "Ratchet & Clank", duracion: { principal: "12 h", extras: "15 h", completo: "25 h" }, anio: 2002, genero: "Plataformas / Acción", desarrolladora: "Insomniac Games" },
-      { titulo: "Katamari Damacy", duracion: { principal: "6 h", extras: "8 h", completo: "14 h" }, anio: 2004, genero: "Puzle / Acción", desarrolladora: "Namco" },
+     
       { titulo: "The Warriors", duracion: { principal: "11 h", extras: "13 h", completo: "16.5 h" }, anio: 2005, genero: "Beat 'em up / Acción", desarrolladora: "Rockstar Toronto" },
       { titulo: "Def Jam: Fight for NY", duracion: { principal: "6 h", extras: "8 h", completo: "13 h" }, anio: 2004, genero: "Lucha", desarrolladora: "AKI Corporation" },
       { titulo: "WWE SmackDown! Here Comes the Pain", duracion: { principal: "14.5 h", extras: "40 h", completo: "124 h" }, anio: 2003, genero: "Lucha Libre / Deportes", desarrolladora: "Yuke's" },
-      { titulo: "Jak and Daxter: The Precursor Legacy", duracion: { principal: "10 h", extras: "11.5 h", completo: "12 h" }, anio: 2001, genero: "Plataformas 3D", desarrolladora: "Naughty Dog" },
+      
       { titulo: "Rule of Rose", duracion: { principal: "8.5 h", extras: "10 h", completo: "10 h" }, anio: 2006, genero: "Survival Horror", desarrolladora: "Punchline" },
       { titulo: "Haunting Ground", duracion: { principal: "9 h", extras: "9.5 h", completo: "11.5 h" }, anio: 2005, genero: "Survival Horror", desarrolladora: "Capcom" },
       { titulo: "SMT: Digital Devil Saga", duracion: { principal: "30.5 h", extras: "41.5 h", completo: "73.5 h" }, anio: 2004, genero: "JRPG", desarrolladora: "Atlus" },
@@ -203,7 +203,7 @@ const juegos = [
       { titulo: "Downhill Domination", duracion: { principal: "4.5 h", extras: "10 h", completo: "50 h" }, anio: 2003, genero: "Carreras / Deportes", desarrolladora: "Incognito Entertainment" },
       { titulo: "Burnout 3: Takedown", duracion: { principal: "13 h", extras: "16 h", completo: "27 h" }, anio: 2004, genero: "Carreras / Arcade", desarrolladora: "Criterion Games" },
       { titulo: "Rogue Galaxy", duracion: { principal: "38.5 h", extras: "61 h", completo: "106 h" }, anio: 2005, genero: "JRPG / Acción", desarrolladora: "Level-5" },
-      { titulo: "Dark Chronicle / Dark Cloud 2", duracion: { principal: "50.5 h", extras: "69 h", completo: "135 h" }, anio: 2002, genero: "JRPG / Acción", desarrolladora: "Level-5" },
+      
       { titulo: "Dirge of Cerberus: FFVII", duracion: { principal: "11.5 h", extras: "15 h", completo: "34 h" }, anio: 2006, genero: "Shooter / Acción", desarrolladora: "Square Enix" },
       { titulo: "Onimusha 3: Demon Siege", duracion: { principal: "12 h", extras: "15.5 h", completo: "20 h" }, anio: 2004, genero: "Hack and Slash / Acción", desarrolladora: "Capcom" },
       { titulo: "Shadow of Rome", duracion: { principal: "15 h", extras: "19 h", completo: "25 h" }, anio: 2005, genero: "Hack and Slash / Acción", desarrolladora: "Capcom" },
@@ -218,7 +218,7 @@ const juegos = [
       { titulo: "Shinobi", duracion: { principal: "8 h", extras: "11 h", completo: "18 h" }, anio: 2002, genero: "Hack and Slash / Acción", desarrolladora: "Overworks" },
       { titulo: "Urban Reign", duracion: { principal: "6.5 h", extras: "8 h", completo: "11 h" }, anio: 2005, genero: "Beat 'em up", desarrolladora: "Namco" },
       { titulo: "Call of Duty 3", duracion: { principal: "8 h", extras: "9 h", completo: "10.5 h" }, anio: 2006, genero: "FPS", desarrolladora: "Treyarch" },
-      { titulo: "Metal Gear Solid 3: Subsistence", duracion: { principal: "16 h", extras: "21 h", completo: "32 h" }, anio: 2005, genero: "Acción / Sigilo", desarrolladora: "Konami" },
+     
       { titulo: "Guilty Gear X Plus", duracion: { principal: "2 h", extras: "4 h", completo: "12 h" }, anio: 2001, genero: "Lucha", desarrolladora: "Arc System Works" },
       { titulo: "God Hand", duracion: { principal: "13 h", extras: "18 h", completo: "29 h" }, anio: 2006, genero: "Beat 'em up", desarrolladora: "Clover Studio" },
       { titulo: "Peter Jackson's King Kong", duracion: { principal: "6 h", extras: "7 h", completo: "8.5 h" }, anio: 2005, genero: "Acción / FPS", desarrolladora: "Ubisoft Montpellier" },
@@ -229,7 +229,7 @@ const juegos = [
     consola: "Sega Dreamcast",
     lista: [
       { titulo: "Shenmue", duracion: { principal: "18 h", extras: "24 h", completo: "32 h" }, anio: 1999, genero: "Aventura / Mundo Abierto", desarrolladora: "SEGA AM2" },
-      { titulo: "Resident Evil 2", duracion: { principal: "6 h", extras: "8 h", completo: "11 h" }, anio: 1999, genero: "Survival Horror", desarrolladora: "Capcom" },
+      
       { titulo: "Dead or Alive 2", duracion: { principal: "1 h", extras: "2.5 h", completo: "9 h" }, anio: 2000, genero: "Lucha", desarrolladora: "Team Ninja" },
       { titulo: "Marvel vs. Capcom 2", duracion: { principal: "1 h", extras: "3 h", completo: "20 h" }, anio: 2000, genero: "Lucha", desarrolladora: "Capcom" },
       { titulo: "Rez", duracion: { principal: "1.5 h", extras: "2.5 h", completo: "7 h" }, anio: 2001, genero: "Rail Shooter / Rítmico", desarrolladora: "United Game Artists" },
@@ -245,7 +245,7 @@ const juegos = [
     lista: [
       { titulo: "The Legend of Zelda: The Wind Waker", duracion: { principal: "29 h", extras: "42 h", completo: "60 h" }, anio: 2002, genero: "Acción / Aventura", desarrolladora: "Nintendo EAD" },
       { titulo: "Super Mario Sunshine", duracion: { principal: "15 h", extras: "21 h", completo: "29.5 h" }, anio: 2002, genero: "Plataformas 3D", desarrolladora: "Nintendo EAD" },
-      { titulo: "Resident Evil 4", duracion: { principal: "15.5 h", extras: "22 h", completo: "31.5 h" }, anio: 2005, genero: "Survival Horror / Acción", desarrolladora: "Capcom" },
+     { titulo: "Spyro: Enter the Dragonfly", duracion: { principal: "9.5 h", extras: "10.5 h", completo: "11.5 h" }, anio: 2002, genero: "Plataformas 3D", desarrolladora: "Check Five Games" },
       { titulo: "Paper Mario: The Thousand-Year Door", duracion: { principal: "30.5 h", extras: "44 h", completo: "63 h" }, anio: 2004, genero: "RPG", desarrolladora: "Intelligent Systems" },
       { titulo: "Fire Emblem: Path of Radiance", duracion: { principal: "33 h", extras: "39 h", completo: "44 h" }, anio: 2005, genero: "RPG Táctico", desarrolladora: "Intelligent Systems" },
       { titulo: "Metroid Prime", duracion: { principal: "14 h", extras: "19 h", completo: "27 h" }, anio: 2002, genero: "FPS / Aventura", desarrolladora: "Retro Studios" },
@@ -261,8 +261,8 @@ const juegos = [
       { titulo: "Tom and Jerry in War of the Whiskers", duracion: { principal: "2 h", extras: "3 h", completo: "5 h" }, anio: 2002, genero: "Lucha / Party", desarrolladora: "VIS Entertainment" },
       { titulo: "Skies of Arcadia Legends", duracion: { principal: "46 h", extras: "58 h", completo: "84 h" }, anio: 2002, genero: "JRPG", desarrolladora: "Overworks" },
       { titulo: "Pikmin", duracion: { principal: "7.5 h", extras: "10 h", completo: "14 h" }, anio: 2001, genero: "Estrategia / Puzle", desarrolladora: "Nintendo EAD" },
-      { titulo: "Prince of Persia: Warrior Within", duracion: { principal: "12 h", extras: "14.5 h", completo: "18 h" }, anio: 2004, genero: "Acción / Plataformas", desarrolladora: "Ubisoft Montreal" },
-      { titulo: "Prince of Persia: The Two Thrones", duracion: { principal: "9.5 h", extras: "11 h", completo: "13 h" }, anio: 2005, genero: "Acción / Plataformas", desarrolladora: "Ubisoft Montreal" }
+  
+    
     ]
   },
   {
@@ -300,9 +300,10 @@ const juegos = [
       { titulo: "Super Mario Galaxy 2", duracion: { principal: "13.5 h", extras: "18 h", completo: "35 h" }, anio: 2010, genero: "Plataformas", desarrolladora: "Nintendo EAD Tokyo" },
       { titulo: "Muramasa: The Demon Blade", duracion: { principal: "10.5 h", extras: "15 h", completo: "29 h" }, anio: 2009, genero: "Hack and Slash / Action RPG", desarrolladora: "Vanillaware" },
       { titulo: "Transformers Prime: The Game", duracion: { principal: "4 h", extras: "5 h", completo: "6 h" }, anio: 2012, genero: "Acción / Beat 'em up", desarrolladora: "Now Production" },
-      { titulo: "Mega Man 9", duracion: { principal: "3.5 h", extras: "5 h", completo: "9 h" }, anio: 2008, genero: "Plataformas / Acción", desarrolladora: "Inti Creates / Capcom" },
-      { titulo: "Rhythm Heaven Fever", duracion: { principal: "6.5 h", extras: "9 h", completo: "18 h" }, anio: 2011, genero: "Rítmico", desarrolladora: "Nintendo SPD / TNX" },
-      { titulo: "Endless Ocean: Blue World", duracion: { principal: "15 h", extras: "20 h", completo: "30 h" }, anio: 2009, genero: "Aventura / Simulación", desarrolladora: "Arika" }
+      { titulo: "Rayman Origins", duracion: { principal: "11h", extras: "14½h", completo: "21½h" }, anio: 2011, genero: "Plataformas / Acción", desarrolladora: "Ubisoft Montpellier" },
+      { titulo: "Rhythm Heaven Fever", duracion: { principal: "6½h", extras: "11h", completo: "24½h" }, anio: 2011, genero: "Ritmico", desarrolladora: "Nintendo SPD/TNX" },
+      { titulo: "Endless Ocean: Blue World", duracion: { principal: "15 h", extras: "20 h", completo: "30 h" }, anio: 2009, genero: "Aventura / Simulación", desarrolladora: "Arika" },
+      { titulo: "Prince of Persia: The Forgotten Sands", duracion: { principal: "10 h", extras: "12 h", completo: "15 h" }, anio: 2010, genero: "Acción / Aventura / Plataformas", desarrolladora: "Ubisoft Quebec" }
     ]
   },
   {
@@ -343,16 +344,16 @@ const juegos = [
       { titulo: "Kingdom Hearts: Birth by Sleep", duracion: { principal: "26.5 h", extras: "41 h", completo: "73.5 h" }, anio: 2010, genero: "Action RPG", desarrolladora: "Square Enix" },
       { titulo: "Final Fantasy Tactics: War of the Lions", duracion: { principal: "38.5 h", extras: "59 h", completo: "84.5 h" }, anio: 2007, genero: "RPG Táctico", desarrolladora: "Square Enix" },
       { titulo: "Disgaea 2: Dark Hero Days", duracion: { principal: "41.5 h", extras: "65 h", completo: "142 h" }, anio: 2009, genero: "RPG Táctico", desarrolladora: "Nippon Ichi Software" },
-      { titulo: "Ghost Rider", duracion: { principal: "4.5 h", extras: "5.5 h", completo: "6.5 h" }, anio: 2007, genero: "Hack and Slash / Acción", desarrolladora: "Climax Group" },
+      { titulo: "Michael Jackson: The Experience", duracion: { principal: "3h", extras: "4.5 h", completo: "6 h" }, anio: 2010, genero: "Rítmico", desarrolladora: "Ubisoft" },
       { titulo: "The Legend of Heroes: Trails in the Sky", duracion: { principal: "50.5 h", extras: "65 h", completo: "83 h" }, anio: 2004, genero: "JRPG", desarrolladora: "Nihon Falcom" },
       { titulo: "Phantasy Star Portable 2", duracion: { principal: "26.5 h", extras: "68 h", completo: "210 h" }, anio: 2009, genero: "Action RPG", desarrolladora: "Alfa System / Sega" },
       { titulo: "Patapon", duracion: { principal: "13.5 h", extras: "18 h", completo: "29 h" }, anio: 2007, genero: "Rítmico / Estrategia", desarrolladora: "Pyramid / Japan Studio" },
       { titulo: "LittleBigPlanet", duracion: { principal: "5.5 h", extras: "10 h", completo: "22 h" }, anio: 2009, genero: "Plataformas", desarrolladora: "SCE Cambridge Studio" },
       { titulo: "Kenka Bancho: Badass Rumble", duracion: { principal: "6.5 h", extras: "10 h", completo: "18 h" }, anio: 2008, genero: "Beat 'em up / Acción", desarrolladora: "Spike" },
-      { titulo: "Dante's Inferno", duracion: { principal: "6 h", extras: "7 h", completo: "9 h" }, anio: 2010, genero: "Hack and Slash / Acción", desarrolladora: "A2M" },
+      { titulo: "Naruto Shippuden Ultimate Ninja Impact ", duracion: { principal: "23 h", extras: "33½ h", completo: "69½ h" }, anio: 2011, genero: "Battle Arena / Musou", desarrolladora: "CyberConnect2 / Racjin" },
       { titulo: "Resistance: Retribution", duracion: { principal: "8 h", extras: "9.5 h", completo: "13 h" }, anio: 2009, genero: "TPS / Acción", desarrolladora: "Bend Studio" },
       { titulo: "Tenchu: Shadow Assassins", duracion: { principal: "7.5 h", extras: "9 h", completo: "12 h" }, anio: 2009, genero: "Sigilo / Acción", desarrolladora: "Acquire" },
-      { titulo: "Silent Hill: Origins", duracion: { principal: "6 h", extras: "7 h", completo: "9 h" }, anio: 2007, genero: "Survival Horror", desarrolladora: "Climax Action" },
+      { titulo: "Ratchet & Clank Size Matters ", duracion: { principal: "7 h", extras: "9 h", completo: "14½ h" }, anio: 2007, genero: "Third-Person / Plataformas / Disparos", desarrolladora: "High Impact Games" },
       { titulo: "Corpse Party", duracion: { principal: "11 h", extras: "14 h", completo: "20 h" }, anio: 2010, genero: "Survival Horror / Aventura", desarrolladora: "Team GrisGris / 5pb." },
       { titulo: "Class of Heroes", duracion: { principal: "38.5 h", extras: "55 h", completo: "80 h" }, anio: 2008, genero: "Dungeon Crawler / RPG", desarrolladora: "ZeroDiv" },
       { titulo: "Crisis Core: Final Fantasy VII", duracion: { principal: "18 h", extras: "24 h", completo: "36 h" }, anio: 2007, genero: "Action RPG", desarrolladora: "Square Enix" },
@@ -388,25 +389,19 @@ const juegos = [
       { titulo: "Half-Life", duracion: { principal: "11.5 h", extras: "13 h", completo: "15 h" }, anio: 1998, genero: "FPS / Ciencia Ficción", desarrolladora: "Valve" },
       { titulo: "Ship of Harkinian (Ocarina of Time)", duracion: { principal: "26.5 h", extras: "31 h", completo: "38 h" }, anio: 2022, genero: "Acción / Aventura", desarrolladora: "Harbour Masters" },
       { titulo: "Battlefield 1942", duracion: { principal: "12 h", extras: "15 h", completo: "20 h" }, anio: 2002, genero: "FPS / Bélico", desarrolladora: "DICE" },
-      { titulo: "Borderlands", duracion: { principal: "22.5 h", extras: "30 h", completo: "62 h" }, anio: 2009, genero: "FPS / Looter Shooter", desarrolladora: "Gearbox Software" },
-      { titulo: "Naruto Shippuden: Ultimate Ninja Storm", duracion: { principal: "10.5 h", extras: "13 h", completo: "16 h" }, anio: 2008, genero: "Lucha / Acción", desarrolladora: "CyberConnect2" },
-      { titulo: "Naruto Shippuden: Ultimate Ninja Storm 2", duracion: { principal: "15 h", extras: "18 h", completo: "22 h" }, anio: 2010, genero: "Lucha / Acción", desarrolladora: "CyberConnect2" },
-      { titulo: "Naruto Shippuden: Ultimate Ninja Storm 3", duracion: { principal: "11.5 h", extras: "14 h", completo: "19 h" }, anio: 2013, genero: "Lucha / Acción", desarrolladora: "CyberConnect2" },
-      { titulo: "Naruto Shippuden: Ultimate Ninja Storm 4", duracion: { principal: "9 h", extras: "11 h", completo: "14 h" }, anio: 2016, genero: "Lucha / Acción", desarrolladora: "CyberConnect2" },
+      
+     
       { titulo: "Dragon Ball Xenoverse", duracion: { principal: "17 h", extras: "26 h", completo: "51 h" }, anio: 2015, genero: "Lucha / Action RPG", desarrolladora: "Dimps" },
-      { titulo: "Dragon Ball Xenoverse 2", duracion: { principal: "19.5 h", extras: "32 h", completo: "98 h" }, anio: 2016, genero: "Lucha / Action RPG", desarrolladora: "Dimps" },
       { titulo: "Celeste", duracion: { principal: "8 h", extras: "12 h", completo: "35 h" }, anio: 2018, genero: "Plataformas", desarrolladora: "Maddy Makes Games" },
       { titulo: "Cuphead", duracion: { principal: "10.5 h", extras: "13 h", completo: "25 h" }, anio: 2017, genero: "Run and Gun / Acción", desarrolladora: "Studio MDHR" },
       { titulo: "Pariah", duracion: { principal: "6.5 h", extras: "8 h", completo: "9.5 h" }, anio: 2005, genero: "FPS", desarrolladora: "Digital Extremes" },
       { titulo: "Max Payne 1", duracion: { principal: "8 h", extras: "9 h", completo: "11 h" }, anio: 2001, genero: "TPS / Acción", desarrolladora: "Remedy Entertainment" },
       { titulo: "Medal of Honor: Allied Assault", duracion: { principal: "7.5 h", extras: "8.5 h", completo: "9.5 h" }, anio: 2002, genero: "FPS / Bélico", desarrolladora: "2015, Inc." },
-      { titulo: "Beyond Good & Evil", duracion: { principal: "10 h", extras: "11.5 h", completo: "13 h" }, anio: 2003, genero: "Acción / Aventura", desarrolladora: "Ubisoft Pictures" },
+     
       { titulo: "Doom 3", duracion: { principal: "11 h", extras: "12 h", completo: "14 h" }, anio: 2004, genero: "FPS / Survival Horror", desarrolladora: "id Software" },
       { titulo: "F.E.A.R.", duracion: { principal: "8 h", extras: "9 h", completo: "11 h" }, anio: 2005, genero: "FPS / Terror", desarrolladora: "Monolith Productions" },
-      { titulo: "TES IV: Oblivion", duracion: { principal: "27.5 h", extras: "41 h", completo: "87 h" }, anio: 2006, genero: "ARPG / Mundo Abierto", desarrolladora: "Bethesda Game Studios" },
       { titulo: "Company of Heroes 1", duracion: { principal: "15.5 h", extras: "20 h", completo: "32 h" }, anio: 2006, genero: "Estrategia (RTS)", desarrolladora: "Relic Entertainment" },
       { titulo: "Hitman: Blood Money", duracion: { principal: "13 h", extras: "15 h", completo: "20 h" }, anio: 2006, genero: "Sigilo / Acción", desarrolladora: "IO Interactive" },
-      { titulo: "Yakuza 0", duracion: { principal: "31.5 h", extras: "62 h", completo: "141 h" }, anio: 2015, genero: "Acción / Beat 'em up", desarrolladora: "Ryu Ga Gotoku Studio" }
 ,
 { titulo: "2 Ship 2 Harkinian (Majora's Mask)", duracion: { principal: "20.5 h", extras: "25 h", completo: "30 h" }, anio: 2024, genero: "Acción / Aventura", desarrolladora: "Harbour Masters" },
       { titulo: "Perfect Dark", duracion: { principal: "9.5 h", extras: "13 h", completo: "20 h" }, anio: 2000, genero: "FPS / Sigilo", desarrolladora: "Rare" },
@@ -416,18 +411,15 @@ const juegos = [
       { titulo: "PAC-MAN WORLD Re-PAC", duracion: { principal: "5 h", extras: "7 h", completo: "11 h" }, anio: 2022, genero: "Plataformas 3D", desarrolladora: "NOW Production" },
       { titulo: "Blasphemous 2", duracion: { principal: "14 h", extras: "19 h", completo: "27 h" }, anio: 2023, genero: "Metroidvania / Hack and Slash", desarrolladora: "The Game Kitchen" },
       { titulo: "Tomb Raider (2013)", duracion: { principal: "11.5 h", extras: "15 h", completo: "21 h" }, anio: 2013, genero: "Acción / Aventura", desarrolladora: "Crystal Dynamics" },
-      { titulo: "Sleeping Dogs", duracion: { principal: "14.5 h", extras: "21 h", completo: "32 h" }, anio: 2012, genero: "Acción / Mundo Abierto", desarrolladora: "United Front Games" },
       { titulo: "Assassin's Creed Brotherhood", duracion: { principal: "15 h", extras: "22 h", completo: "37 h" }, anio: 2010, genero: "Acción / Sigilo", desarrolladora: "Ubisoft Montreal" },
-      { titulo: "Mafia II", duracion: { principal: "12 h", extras: "14 h", completo: "26 h" }, anio: 2010, genero: "Acción / Mundo Abierto", desarrolladora: "2K Czech" },
+     
       { titulo: "Just Cause 2", duracion: { principal: "18 h", extras: "34 h", completo: "75 h" }, anio: 2010, genero: "Acción / Mundo Abierto", desarrolladora: "Avalanche Studios" },
       { titulo: "Mirror's Edge", duracion: { principal: "6 h", extras: "7 h", completo: "9 h" }, anio: 2008, genero: "Plataformas / FPS", desarrolladora: "DICE" },
-      { titulo: "Dead Space", duracion: { principal: "11 h", extras: "13 h", completo: "20 h" }, anio: 2008, genero: "Survival Horror / TPS", desarrolladora: "EA Redwood Shores" },
       { titulo: "Dead Cells", duracion: { principal: "14.5 h", extras: "29 h", completo: "90 h" }, anio: 2018, genero: "Roguelite / Metroidvania", desarrolladora: "Motion Twin" },
       { titulo: "Shovel Knight", duracion: { principal: "7 h", extras: "9 h", completo: "16 h" }, anio: 2014, genero: "Plataformas / Acción", desarrolladora: "Yacht Club Games" },
       { titulo: "Inside", duracion: { principal: "3.5 h", extras: "4 h", completo: "4.5 h" }, anio: 2016, genero: "Plataformas / Puzle", desarrolladora: "Playdead" },
-      { titulo: "Call of Duty 4: Modern Warfare", duracion: { principal: "7 h", extras: "8 h", completo: "11 h" }, anio: 2007, genero: "FPS", desarrolladora: "Infinity Ward" },
+      
       { titulo: "Deus Ex: Human Revolution", duracion: { principal: "21.5 h", extras: "31 h", completo: "49 h" }, anio: 2011, genero: "Action RPG / Sigilo", desarrolladora: "Eidos-Montréal" },
-      { titulo: "Crysis", duracion: { principal: "10 h", extras: "11 h", completo: "14 h" }, anio: 2007, genero: "FPS / Ciencia Ficción", desarrolladora: "Crytek" },
       { titulo: "Animal Well", duracion: { principal: "7.5 h", extras: "13 h", completo: "20 h" }, anio: 2024, genero: "Metroidvania / Puzle", desarrolladora: "Shared Memory" },
       { titulo: "Ori and the Blind Forest: Definitive Edition", duracion: { principal: "8 h", extras: "11 h", completo: "15 h" }, anio: 2016, genero: "Metroidvania / Plataformas", desarrolladora: "Moon Studios" },
       { titulo: "Katana ZERO", duracion: { principal: "4.5 h", extras: "5.5 h", completo: "10 h" }, anio: 2019, genero: "Acción / Hack and Slash", desarrolladora: "Askiソフト" },
@@ -436,7 +428,6 @@ const juegos = [
       { titulo: "Max Payne 3", duracion: { principal: "12 h", extras: "14 h", completo: "18 h" }, anio: 2012, genero: "TPS / Acción", desarrolladora: "Rockstar Studios" },
       { titulo: "Sonic Colors: Ultimate", duracion: { principal: "4.5 h", extras: "6 h", completo: "9 h" }, anio: 2021, genero: "Plataformas", desarrolladora: "Blind Squirrel Games" },
       { titulo: "Assassin's Creed III", duracion: { principal: "16 h", extras: "27 h", completo: "54 h" }, anio: 2012, genero: "Acción / Aventura", desarrolladora: "Ubisoft Montreal" },
-      { titulo: "Assassin's Creed IV: Black Flag", duracion: { principal: "23.5 h", extras: "35 h", completo: "61 h" }, anio: 2013, genero: "Acción / Mundo Abierto", desarrolladora: "Ubisoft Montreal" },
       { titulo: "TMNT: Shredder's Revenge", duracion: { principal: "2.5 h", extras: "3.5 h", completo: "7.5 h" }, anio: 2022, genero: "Beat 'em up", desarrolladora: "Tribute Games" },
       { titulo: "StarCraft II: Wings of Liberty", duracion: { principal: "15 h", extras: "18 h", completo: "26 h" }, anio: 2010, genero: "Estrategia (RTS)", desarrolladora: "Blizzard Entertainment" },
       { titulo: "Fallout: New Vegas", duracion: { principal: "27.5 h", extras: "47 h", completo: "96 h" }, anio: 2010, genero: "Action RPG / Mundo Abierto", desarrolladora: "Obsidian Entertainment" },
@@ -452,28 +443,23 @@ const juegos = [
       { titulo: "Battlefield: Bad Company 2", duracion: { principal: "7 h", extras: "8 h", completo: "10 h" }, anio: 2010, genero: "FPS", desarrolladora: "DICE" },
       { titulo: "Amnesia: The Dark Descent", duracion: { principal: "8 h", extras: "8.5 h", completo: "10 h" }, anio: 2010, genero: "Survival Horror", desarrolladora: "Frictional Games" },
       { titulo: "Enslaved: Odyssey to the West", duracion: { principal: "9.5 h", extras: "11 h", completo: "13 h" }, anio: 2010, genero: "Acción / Aventura", desarrolladora: "Ninja Theory" },
-      { titulo: "TES V: Skyrim", duracion: { principal: "34.5 h", extras: "70 h", completo: "233 h" }, anio: 2011, genero: "ARPG / Mundo Abierto", desarrolladora: "Bethesda Game Studios" },
-      { titulo: "Dark Souls: Remastered", duracion: { principal: "41.5 h", extras: "60 h", completo: "91 h" }, anio: 2018, genero: "Action RPG", desarrolladora: "QLOC / FromSoftware" },
-      { titulo: "L.A. Noire", duracion: { principal: "21.5 h", extras: "27 h", completo: "39 h" }, anio: 2011, genero: "Aventura / Misterio", desarrolladora: "Team Bondi" },
-      { titulo: "Saints Row: The Third", duracion: { principal: "14.5 h", extras: "22 h", completo: "43 h" }, anio: 2011, genero: "Acción / Mundo Abierto", desarrolladora: "Volition" },
       { titulo: "Alice: Madness Returns", duracion: { principal: "13.5 h", extras: "15 h", completo: "18 h" }, anio: 2011, genero: "Plataformas / Acción", desarrolladora: "Spicy Horse" },
       { titulo: "The Walking Dead", duracion: { principal: "11.5 h", extras: "12 h", completo: "13 h" }, anio: 2012, genero: "Aventura Gráfica", desarrolladora: "Telltale Games" },
-      { titulo: "Call of Duty: Black Ops 2", duracion: { principal: "7 h", extras: "8 h", completo: "11 h" }, anio: 2012, genero: "FPS", desarrolladora: "Treyarch" },
+     
       { titulo: "Spec Ops: The Line", duracion: { principal: "6 h", extras: "7 h", completo: "9 h" }, anio: 2012, genero: "TPS / Acción", desarrolladora: "Yager Development" },
       { titulo: "BioShock Infinite", duracion: { principal: "11.5 h", extras: "14 h", completo: "27 h" }, anio: 2013, genero: "FPS / Ciencia Ficción", desarrolladora: "Irrational Games" },
       { titulo: "Metro: Last Light", duracion: { principal: "10 h", extras: "11 h", completo: "14 h" }, anio: 2013, genero: "FPS / Survival Horror", desarrolladora: "4A Games" },
-      { titulo: "Battlefield 4", duracion: { principal: "6 h", extras: "7 h", completo: "9 h" }, anio: 2013, genero: "FPS", desarrolladora: "DICE" },
-      { titulo: "Outlast", duracion: { principal: "5 h", extras: "6 h", completo: "7.5 h" }, anio: 2013, genero: "Survival Horror", desarrolladora: "Red Barrels" },
+      
+  
       { titulo: "The Stanley Parable", duracion: { principal: "1.5 h", extras: "3.5 h", completo: "26 h" }, anio: 2013, genero: "Aventura / Narrativo", desarrolladora: "Galactic Cafe" },
       { titulo: "Assassin's Creed 2", duracion: { principal: "19 h", extras: "25 h", completo: "36 h" }, anio: 2009, genero: "Acción / Aventura", desarrolladora: "Ubisoft Montreal" },
       { titulo: "Mega Man 3 (Legacy Collection)", duracion: { principal: "2.5 h", extras: "3 h", completo: "4 h" }, anio: 2015, genero: "Plataformas / Acción", desarrolladora: "Digital Eclipse" },
       { titulo: "Final Fantasy VI Pixel Remaster", duracion: { principal: "35 h", extras: "41 h", completo: "52 h" }, anio: 2022, genero: "JRPG", desarrolladora: "Square Enix" },
-      { titulo: "Wild Guns Reloaded", duracion: { principal: "1 h", extras: "1.5 h", completo: "6 h" }, anio: 2017, genero: "Shoot 'em up / Arcade", desarrolladora: "NatsumeAtari" },
+    
       { titulo: "PAC-MAN WORLD 2 Re-PAC", duracion: { principal: "6.5 h", extras: "8 h", completo: "12 h" }, anio: 2025, genero: "Plataformas 3D", desarrolladora: "Bandai Namco Studios" },
-      { titulo: "Legacy of Kain: Soul Reaver 1 Remastered", duracion: { principal: "13.5 h", extras: "15 h", completo: "18 h" }, anio: 2024, genero: "Acción / Aventura", desarrolladora: "Aspyr / Crystal Dynamics" },
+      
       { titulo: "Turok 2 Remastered", duracion: { principal: "12.5 h", extras: "14 h", completo: "17 h" }, anio: 2015, genero: "FPS / Acción", desarrolladora: "Nightdive Studios" },
       { titulo: "Shadow Man Remastered", duracion: { principal: "17.5 h", extras: "21 h", completo: "26 h" }, anio: 2021, genero: "Acción / Aventura", desarrolladora: "Nightdive Studios" },
-      { titulo: "Silent Hill 2 Enhanced Edition", duracion: { principal: "8 h", extras: "10 h", completo: "13 h" }, anio: 2018, genero: "Survival Horror", desarrolladora: "Townfall Team" },
       { titulo: "LEGO Indiana Jones: The Original Adventures", duracion: { principal: "27 h", extras: "35 h", completo: "52 h" }, anio: 2008, genero: "Acción / Aventura", desarrolladora: "TT Games" },
       { titulo: "DMC HD Collection (DMC 1)", duracion: { principal: "6 h", extras: "8 h", completo: "14 h" }, anio: 2018, genero: "Hack and Slash", desarrolladora: "Capcom" },
       { titulo: "GTA III", duracion: { principal: "15.5 h", extras: "20 h", completo: "40 h" }, anio: 2001, genero: "Acción / Mundo Abierto", desarrolladora: "DMA Design" },
@@ -491,10 +477,6 @@ const juegos = [
       { titulo: "Spongebob Battle for Bikini Bottom Rehydrated", duracion: { principal: "7.5 h", extras: "10 h", completo: "15 h" }, anio: 2020, genero: "Plataformas 3D", desarrolladora: "Purple Lamp Studios" },
       { titulo: "Half-Life 2", duracion: { principal: "13 h", extras: "15 h", completo: "19 h" }, anio: 2004, genero: "FPS / Ciencia Ficción", desarrolladora: "Valve" },
       { titulo: "Portal 2", duracion: { principal: "8.5 h", extras: "10 h", completo: "21 h" }, anio: 2011, genero: "Puzle / FPS", desarrolladora: "Valve" },
-      { titulo: "Batman: Arkham City", duracion: { principal: "12.5 h", extras: "22 h", completo: "45 h" }, anio: 2011, genero: "Acción / Aventura", desarrolladora: "Rocksteady Studios" },
-      { titulo: "Alien: Isolation", duracion: { principal: "18.5 h", extras: "22 h", completo: "33 h" }, anio: 2014, genero: "Survival Horror / Sigilo", desarrolladora: "Creative Assembly" },
-      { titulo: "Outlast 2", duracion: { principal: "7.5 h", extras: "9 h", completo: "11 h" }, anio: 2017, genero: "Survival Horror", desarrolladora: "Red Barrels" },
-      { titulo: "Darksiders", duracion: { principal: "15 h", extras: "18 h", completo: "23 h" }, anio: 2010, genero: "Hack and Slash / Aventura", desarrolladora: "Vigil Games" },
       { titulo: "Kingdoms of Amalur: Reckoning", duracion: { principal: "31.5 h", extras: "52 h", completo: "92 h" }, anio: 2012, genero: "Action RPG", desarrolladora: "38 Studios / Big Huge Games" },
       { titulo: "Bully: Scholarship Edition", duracion: { principal: "13 h", extras: "19 h", completo: "28 h" }, anio: 2008, genero: "Acción / Mundo Abierto", desarrolladora: "Mad Doc Software / Rockstar" },
       { titulo: "Prototype", duracion: { principal: "15.5 h", extras: "19 h", completo: "27 h" }, anio: 2009, genero: "Acción / Mundo Abierto", desarrolladora: "Radical Entertainment" },
@@ -508,12 +490,13 @@ const juegos = [
       { titulo: "Driver: San Francisco", duracion: { principal: "10.5 h", extras: "15 h", completo: "27 h" }, anio: 2011, genero: "Acción / Conducción", desarrolladora: "Ubisoft Reflections" },
       { titulo: "Broforce", duracion: { principal: "4 h", extras: "6 h", completo: "12 h" }, anio: 2015, genero: "Run and Gun / Acción", desarrolladora: "Free Lives" },
       { titulo: "Sonic Adventure DX", duracion: { principal: "4.5 h", extras: "6 h", completo: "9 h" }, anio: 2004, genero: "Plataformas 3D", desarrolladora: "Sonic Team" },
-      { titulo: "JoJo's Bizarre Adventure: All-Star Battle R", duracion: { principal: "5.5 h", extras: "10 h", completo: "27 h" }, anio: 2022, genero: "Lucha", desarrolladora: "CyberConnect2" },
       { titulo: "Binary Domain", duracion: { principal: "9 h", extras: "11 h", completo: "14 h" }, anio: 2012, genero: "TPS / Acción", desarrolladora: "Devil's Details / Ryu Ga Gotoku Studio" },
       { titulo: "LEGO Marvel Super Heroes", duracion: { principal: "42.5 h", extras: "55 h", completo: "76 h" }, anio: 2013, genero: "Acción / Aventura", desarrolladora: "TT Games" },
-      { titulo: "LEGO Marvel Super Heroes 2", duracion: { principal: "57.5 h", extras: "73 h", completo: "96 h" }, anio: 2017, genero: "Acción / Aventura", desarrolladora: "TT Games" },
       { titulo: "GTA San Andreas (+ Mods)", duracion: { principal: "30.5 h", extras: "47 h", completo: "90 h" }, anio: 2004, genero: "Acción / Mundo Abierto", desarrolladora: "Rockstar North" },
-      { titulo: "Batman: Arkham Asylum", duracion: { principal: "11.5 h", extras: "16 h", completo: "25 h" }, anio: 2009, genero: "Acción / Aventura", desarrolladora: "Rocksteady Studios" }
+    { titulo: "Prince of Persia: Warrior Within", duracion: { principal: "12 h", extras: "14.5 h", completo: "18 h" }, anio: 2004, genero: "Acción / Plataformas", desarrolladora: "Ubisoft Montreal" },
+      { titulo: "Prince of Persia: The Two Thrones", duracion: { principal: "9.5 h", extras: "11 h", completo: "13 h" }, anio: 2005, genero: "Acción / Plataformas", desarrolladora: "Ubisoft Montreal" },
+      { titulo: "Tomb Raider: Legend", duracion: { principal: "7 h", extras: "9 h", completo: "15 h" }, anio: 2006, genero: "Acción / Plataformas / Aventura", desarrolladora: "Crystal Dynamics" },
+      { titulo: "Evil Dead: Regeneration", duracion: { principal: "8 h", extras: "9.5 h", completo: "11.5 h" }, anio: 2005, genero: "Acción / Hack and Slash", desarrolladora: "Cranky Pants Games" }
     ]
   }
 ];
